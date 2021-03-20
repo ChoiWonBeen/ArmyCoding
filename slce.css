@@ -18,6 +18,9 @@
 .editor {
   width: 100%;
   height: 33.33%;
+  resize: none;
+  outline: none;
+  border-bottom: none;
 }
 
 #display-field {
