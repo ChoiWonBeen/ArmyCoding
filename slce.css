@@ -6,7 +6,7 @@
 
 #container {
   display: flex;
-  width: calc(100% - 32px);
+  width: 100%;
   padding: 0 16px;
 }
 
