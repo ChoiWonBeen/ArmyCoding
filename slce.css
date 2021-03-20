@@ -5,17 +5,16 @@
 }
 
 #container {
+  display: flex;
   width: calc(100% - 32px);
   padding: 0 16px;
 }
 
 #editor-field {
-  width: 50%;
-  display: inline-block;
+  width: 35%;
 }
 
 #display-field {
-  width: 50%;
-  display: inline-block;
+  width: auto;
 }
 
