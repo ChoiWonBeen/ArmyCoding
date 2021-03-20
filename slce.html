@@ -7,18 +7,26 @@
   <body>
     <h1>Code Editor</h1>
     
-    <div id="active-btn">
-      <input name="active-type" type="radio" id="open-html-btn" checked/>
-      <label for="open-html-btn">html</label>
-      <input name="active-type" type="radio" id="open-js-btn"/>
-      <label for="open-js-btn">js</label>
-      <input name="active-type" type="radio" id="open-css-btn"/>
-      <label for="open-css-btn">css</label>
+    <div id="container">
+      <div id="editor-field">
+        <div id="active-btn">
+          <input name="active-type" type="radio" class="select-type" id="html-btn" checked/>
+          <label for="html-btn">html</label>
+          <input name="active-type" type="radio" class="select-type" id="js-btn"/>
+          <label for="js-btn">js</label>
+          <input name="active-type" type="radio" class="select-type" id="css-btn"/>
+          <label for="css-btn">css</label>
+        </div>
+
+        <input type="textarea" class="editor" id="html-editor" class=""/>
+        <input type="textarea" class="editor" id="js-editor"/>
+        <input type="textarea" class="editor" id="css-editor"/>
+      </div>
+      
+      <div id="display-field">
+        this is display
+      </div>
     </div>
-    
-    <input type="textarea" id="html-area" class=""/>
-    <input type="textarea" id="js-area"/>
-    <input type="textarea" id="css-area"/>
     <script type="text/javascript" src="./slce.js"/>
   </body>
 </html>
