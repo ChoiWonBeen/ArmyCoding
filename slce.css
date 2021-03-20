@@ -3,3 +3,18 @@
   padding: 0px;
   box-sizing: border-box;
 }
+
+#container {
+  
+}
+
+#editor-field {
+  width: 50%;
+  display: inline-block;
+}
+
+#display-field {
+  width: 50%;
+  display: inline-block;
+}
+
