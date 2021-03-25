@@ -25,3 +25,9 @@
 #display-field {
   width: 65%;
 }
+
+#preview-display {
+  width: 100%;
+  height: 100%;
+  padding-top: 21px;
+}
