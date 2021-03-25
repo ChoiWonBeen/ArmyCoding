@@ -1,3 +1,6 @@
-let htmlArea = document.getElementById("html-area");
-let jsArea = document.getElementById("js-area");
-let cssArea = document.getElementById("css-area");
+function showCode(){
+  let htmlCode = document.getElementById("html-editor").value;
+  let jsCode = document.getElementById("js-editor").value;
+  let cssCode = document.getElementById("css-editor").value;
+  console.log("html: " + htmlCode + "\njs: " + jsCode + "\ncss: " + cssCode);
+}
