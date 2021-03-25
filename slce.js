@@ -6,6 +6,6 @@ function showCode(){
   
   let frame = document.getElementById("preview-display").contentWindow.document;
   frame.open();
-  frame.wirte(htmlCode + jsCode + cssCode);
+  frame.write(htmlCode + jsCode + cssCode);
   frame.close();
 }
