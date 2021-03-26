@@ -8,6 +8,10 @@ body {
   padding: 0 16px;
 }
 
+.btn {
+  background-color: none;
+}
+
 #btn__html {
   color: red;
 }
