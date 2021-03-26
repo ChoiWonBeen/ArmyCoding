@@ -19,6 +19,7 @@ body {
 }
 
 .editor {
+  display: block;
   width: 100%;
   height: 33.33%;
   resize: none;
