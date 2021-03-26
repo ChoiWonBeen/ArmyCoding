@@ -8,3 +8,10 @@ function showCode(){
   frame.write(htmlCode + jsCode + cssCode);
   frame.close();
 }
+
+let type = {"HTML", "JS", "CSS"};
+let active = "HTML";
+
+function activeHTML(){
+  
+}
