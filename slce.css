@@ -8,6 +8,18 @@ body {
   padding: 0 16px;
 }
 
+#btn__html {
+  color: red;
+}
+
+#btn__js {
+  color: yellow;
+}
+
+#btn__css {
+  color: blue;
+}
+
 #container {
   display: flex;
   width: 100%;
