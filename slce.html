@@ -6,7 +6,7 @@
   </head>
   <body>
     <div id="container">
-      <div id="editor-field">
+      <di id="topnav">
         <div id="active-btn">
           <input name="active-type" type="radio" id="html-btn" class="select-type" checked/>
           <label for="html-btn">html</label>
@@ -15,7 +15,8 @@
           <input name="active-type" type="radio" id="css-btn" class="select-type"/>
           <label for="css-btn">css</label>
         </div>
-
+      </div>
+      <div id="editor-field">
         <textarea class="editor" id="html-editor" placeholder="HTML" class="editor" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" oninput="showCode()"/></textarea>
         <textarea class="editor" id="js-editor" placeholder="JavaScript" class="editor" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" oninput="showCode()"></textarea>
         <textarea class="editor" id="css-editor" placeholder="CSS" class="editor" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" oninput="showCode()"/></textarea>
