@@ -46,9 +46,17 @@ body {
 .editor {
   display: block;
   width: 100%;
-  height: 33.33%;
+  height: 100%;
   resize: none;
   outline: none;
+}
+
+.js-editor {
+  display: none;
+}
+
+.css-editor {
+  display: none;
 }
 
 #display-field {
