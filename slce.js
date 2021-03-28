@@ -60,13 +60,16 @@ function changeType(type){
   }
 }
 
-setInterval(() => {
+function saveCode() {
   localStorage.setItem("htmlCode", HTMLEditor.value);
   localStorage.setItem("jsCode", JSEditor.value);
   localStorage.setItem("cssCode", CSSEditor.value);
+}
+
+setInterval(() => {
+  saveCode();
 }, 30000)
 
 window.onbeforeunload = function() {
-  console.log("event실행");
-  sessionStorage.setItem("1", new Date());
+  saveCode();
 }
