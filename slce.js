@@ -18,6 +18,21 @@ function showCode(){
   frame.close();
 }
 
+let types = ["HTML", "JS", "CSS"];
+let 
+let editors = [HTMLEditor, JSEditor, CSSEditor];
+
+function changeType(type){
+  editors[type].style.display = block;
+  editors[(type + 1) % 3].style.display = none;
+  editors[(type + 2) % 3].style.display = none;
+  
+  if(types[type] == "HTML"){
+    HTMLEditor.style.color = "white"
+    HTMLEditor.style.backgroundColor = "red"
+  }
+}
+
 function activeHTML(){
   HTMLEditor.style.display = "block";
   JSEditor.style.display = "none";
