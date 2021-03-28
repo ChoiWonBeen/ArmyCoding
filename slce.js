@@ -5,7 +5,8 @@ let CSSEditor = document.getElementById("css-editor")
 HTMLEditor.value = localStorage.getItem("htmlCode");
 JSEditor.value = localStorage.getItem("jsCode");
 CSSEditor.value = localStorage.getItem("cssCode");
-showCode(0);
+showCode();
+changeType(0);
 
 function showCode(){
   let htmlCode = HTMLEditor.value;
