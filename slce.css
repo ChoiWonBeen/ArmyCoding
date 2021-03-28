@@ -40,7 +40,8 @@ body {
 }
 
 #editor-field {
-  width: 35%;
+  width: calc(35% - 10px);
+  margin-right: 10px;
 }
 
 .editor {
