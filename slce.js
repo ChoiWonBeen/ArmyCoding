@@ -67,5 +67,5 @@ setInterval(() => {
 }, 30000)
 
 window.onbeforeunload = function() {
-  return false;
+  console.log("event실행");
 }
