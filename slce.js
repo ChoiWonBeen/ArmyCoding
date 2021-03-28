@@ -66,6 +66,6 @@ setInterval(() => {
   localStorage.setItem("cssCode", CSSEditor.value);
 }, 30000)
 
-window.beforeunload = function() {
+window.onbeforeunload = function() {
   return false;
 }
