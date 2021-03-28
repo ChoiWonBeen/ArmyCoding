@@ -66,7 +66,6 @@ setInterval(() => {
   localStorage.setItem("cssCode", CSSEditor.value);
 }, 30000)
 
-window.addEventListener("beforeunload", () => {
-  console.log("event 실행!");
+window.beforeunload = function() {
   return false;
-})
+}
