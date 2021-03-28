@@ -36,7 +36,7 @@ body {
 #container {
   display: flex;
   width: 100%;
-  height: calc(100vh - 30px);
+  height: calc(100vh - 40px);
 }
 
 #editor-field {
