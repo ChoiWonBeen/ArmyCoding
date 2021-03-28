@@ -22,9 +22,9 @@ let types = ["HTML", "JS", "CSS"];
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 
 function changeType(type){
-  editors[type].style.display = block;
-  editors[(type + 1) % 3].style.display = none;
-  editors[(type + 2) % 3].style.display = none;
+  editors[type].style.display = "block";
+  editors[(type + 1) % 3].style.display = "none";
+  editors[(type + 2) % 3].style.display = "none";
   
   if(types[type] == "HTML"){
     HTMLEditor.style.color = "white"
