@@ -68,4 +68,5 @@ setInterval(() => {
 
 window.addEventListener("beforeunload", () => {
   console.log("event 실행!");
+  return false;
 })
