@@ -65,3 +65,7 @@ setInterval(() => {
   localStorage.setItem("jsCode", JSEditor.value);
   localStorage.setItem("cssCode", CSSEditor.value);
 }, 30000)
+
+window.addEventListener("onbeforeunload", () => {
+  console.log("event 실행!");
+})
