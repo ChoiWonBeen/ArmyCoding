@@ -2,6 +2,10 @@ let HTMLEditor = document.getElementById("html-editor");
 let JSEditor = document.getElementById("js-editor")
 let CSSEditor = document.getElementById("css-editor")
 
+HTMLEditor.value = localStorage.getItem("htmlCode");
+JSEditor.value = localStorage.getItem("jsCode");
+CSSEditor.value = localStorage.getItem("cssCode");
+
 function showCode(){
   let htmlCode = HTMLEditor.value;
   let jsCode = "<script>" + JSEditor.value + "</script>";
@@ -14,19 +18,25 @@ function showCode(){
 }
 
 function activeHTML(){
-  HTMLEditor.style.display = "block"
-  JSEditor.style.display = "none"
-  CSSEditor.style.display = "none"
+  HTMLEditor.style.display = "block";
+  JSEditor.style.display = "none";
+  CSSEditor.style.display = "none";
 }
 
-function activeJS(){
-  HTMLEditor.style.display = "none"
-  JSEditor.style.display = "block"
-  CSSEditor.style.display = "none"
+function activeJS(){;
+  HTMLEditor.style.display = "none";
+  JSEditor.style.display = "block";
+  CSSEditor.style.display = "none";
 }
 
 function activeCSS(){
-  HTMLEditor.style.display = "none"
-  JSEditor.style.display = "none"
-  CSSEditor.style.display = "block"
+  HTMLEditor.style.display = "none";
+  JSEditor.style.display = "none";
+  CSSEditor.style.display = "block";
 }
+
+setInterval(() => {
+  localStorage.setItem("htmlCode", HTMLEditor.value);
+  localStorage.setItem("jsCode", JSEditor.value);
+  localStorage.setItem("cssCode", CSSEditor.value);
+}, 30000)
