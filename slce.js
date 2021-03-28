@@ -27,8 +27,8 @@ function changeType(type){
   editors[(type + 2) % 3].style.display = "none";
   
   if(types[type] == "HTML"){
-    HTMLEditor.style.color = "white"
-    HTMLEditor.style.backgroundColor = "red"
+    document.getElementById("btn__html").style.color = "white"
+    document.getElementById("btn__html").style.backgroundColor = "red"
   }
 }
 
