@@ -5,6 +5,9 @@ let CSSEditor = document.getElementById("css-editor")
 HTMLEditor.value = localStorage.getItem("htmlCode");
 JSEditor.value = localStorage.getItem("jsCode");
 CSSEditor.value = localStorage.getItem("cssCode");
+let types = ["HTML", "JS", "CSS"];
+let editors = [HTMLEditor, JSEditor, CSSEditor];
+
 showCode();
 changeType(0);
 
@@ -18,9 +21,6 @@ function showCode(){
   frame.write(htmlCode + jsCode + cssCode);
   frame.close();
 }
-
-let types = ["HTML", "JS", "CSS"];
-let editors = [HTMLEditor, JSEditor, CSSEditor];
 
 function changeType(type){
   editors[type].style.display = "block";
