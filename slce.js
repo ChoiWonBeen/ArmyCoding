@@ -29,6 +29,34 @@ function changeType(type){
   if(types[type] == "HTML"){
     document.getElementById("btn__html").style.color = "white"
     document.getElementById("btn__html").style.backgroundColor = "red"
+    
+    document.getElementById("btn__js").style.color = "#eabf01"
+    document.getElementById("btn__js").style.backgroundColor = "white"
+    
+    document.getElementById("btn__css").style.color = "blue"
+    document.getElementById("btn__css").style.backgroundColor = "white"
+  }
+  
+  if(types[type] == "JS"){
+    document.getElementById("btn__html").style.color = "red"
+    document.getElementById("btn__html").style.backgroundColor = "white"
+    
+    document.getElementById("btn__js").style.color = "white"
+    document.getElementById("btn__js").style.backgroundColor = "#eabf01"
+    
+    document.getElementById("btn__css").style.color = "blue"
+    document.getElementById("btn__css").style.backgroundColor = "white"
+  }
+  
+  if(types[type] == "CSS"){
+    document.getElementById("btn__html").style.color = "red"
+    document.getElementById("btn__html").style.backgroundColor = "white"
+    
+    document.getElementById("btn__js").style.color = "#eabf01"
+    document.getElementById("btn__js").style.backgroundColor = "white"
+    
+    document.getElementById("btn__css").style.color = "white"
+    document.getElementById("btn__css").style.backgroundColor = "blue"
   }
 }
 
