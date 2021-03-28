@@ -13,9 +13,6 @@ function showCode(){
   frame.close();
 }
 
-let type = {"HTML", "JS", "CSS"};
-let active = "HTML";
-
 function activeHTML(){
   HTMLEditor.style.display = "block"
   JSEditor.style.display = "none"
