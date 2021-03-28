@@ -68,4 +68,5 @@ setInterval(() => {
 
 window.onbeforeunload = function() {
   console.log("event실행");
+  sessionStorage.setItem("1", new Date());
 }
