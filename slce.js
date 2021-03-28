@@ -66,10 +66,6 @@ function saveCode() {
   localStorage.setItem("cssCode", CSSEditor.value);
 }
 
-setInterval(() => {
-  saveCode();
-}, 30000)
-
 window.onbeforeunload = function() {
   saveCode();
 }
