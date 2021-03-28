@@ -19,7 +19,6 @@ function showCode(){
 }
 
 let types = ["HTML", "JS", "CSS"];
-let 
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 
 function changeType(type){
