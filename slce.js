@@ -5,7 +5,7 @@ let CSSEditor = document.getElementById("css-editor")
 HTMLEditor.value = localStorage.getItem("htmlCode");
 JSEditor.value = localStorage.getItem("jsCode");
 CSSEditor.value = localStorage.getItem("cssCode");
-showCode();
+showCode(0);
 
 function showCode(){
   let htmlCode = HTMLEditor.value;
@@ -58,24 +58,6 @@ function changeType(type){
     document.getElementById("btn__css").style.color = "white"
     document.getElementById("btn__css").style.backgroundColor = "blue"
   }
-}
-
-function activeHTML(){
-  HTMLEditor.style.display = "block";
-  JSEditor.style.display = "none";
-  CSSEditor.style.display = "none";
-}
-
-function activeJS(){;
-  HTMLEditor.style.display = "none";
-  JSEditor.style.display = "block";
-  CSSEditor.style.display = "none";
-}
-
-function activeCSS(){
-  HTMLEditor.style.display = "none";
-  JSEditor.style.display = "none";
-  CSSEditor.style.display = "block";
 }
 
 setInterval(() => {
