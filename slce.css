@@ -51,11 +51,11 @@ body {
   outline: none;
 }
 
-.js-editor {
+#js-editor {
   display: none;
 }
 
-.css-editor {
+#css-editor {
   display: none;
 }
 
