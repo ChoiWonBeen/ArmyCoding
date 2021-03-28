@@ -27,14 +27,17 @@ body {
 
 #btn__html {
   color: red;
+  border-color: red;
 }
 
 #btn__js {
   color: #eabf01;
+  border-color: #eabf01;
 }
 
 #btn__css {
   color: blue;
+  border-color: blue;
 }
 
 #container {
