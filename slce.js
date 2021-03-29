@@ -12,9 +12,9 @@ showCode();
 changeType(0);
 
 function showCode(){
-  let htmlCode = HTMLEditor;
-  let jsCode = "<script>" + JSEditor + "</script>";
-  let cssCode = "<style>" + CSSEditor + "</style>";
+  let htmlCode = HTMLEditor.innerHTML;
+  let jsCode = "<script>" + JSEditor.innerHTML + "</script>";
+  let cssCode = "<style>" + CSSEditor.innerHTML + "</style>";
 
   let frame = document.getElementById("preview-display").contentWindow.document;
   frame.open();
