@@ -1,12 +1,17 @@
 let HTMLEditor = document.getElementById("html-editor");
-let JSEditor = document.getElementById("js-editor")
-let CSSEditor = document.getElementById("css-editor")
+let JSEditor = document.getElementById("js-editor");
+let CSSEditor = document.getElementById("css-editor");
+let HTMLBtn = document.getElementById("btn__html");
+let JSBtn = document.getElementById("btn__js");
+let CSSBtn = document.getElementById("btn__css");
 
 HTMLEditor.innerText = localStorage.getItem("htmlCode");
 JSEditor.innerText = localStorage.getItem("jsCode");
 CSSEditor.innerText = localStorage.getItem("cssCode");
-let types = ["HTML", "JS", "CSS"];
+
 let editors = [HTMLEditor, JSEditor, CSSEditor];
+let btns = [HTMLBtn, JSBtn, CSSBtn];
+let typeColors = ["red", "#eabf01", "blue"];
 
 showCode();
 changeType(0);
@@ -32,37 +37,15 @@ function changeType(type){
   editors[(type + 1) % 3].style.display = "none";
   editors[(type + 2) % 3].style.display = "none";
   
-  if(types[type] == "HTML"){
-    document.getElementById("btn__html").style.color = "white"
-    document.getElementById("btn__html").style.backgroundColor = "red"
-    
-    document.getElementById("btn__js").style.color = "#eabf01"
-    document.getElementById("btn__js").style.backgroundColor = "white"
-    
-    document.getElementById("btn__css").style.color = "blue"
-    document.getElementById("btn__css").style.backgroundColor = "white"
-  }
-  
-  if(types[type] == "JS"){
-    document.getElementById("btn__html").style.color = "red"
-    document.getElementById("btn__html").style.backgroundColor = "white"
-    
-    document.getElementById("btn__js").style.color = "white"
-    document.getElementById("btn__js").style.backgroundColor = "#eabf01"
-    
-    document.getElementById("btn__css").style.color = "blue"
-    document.getElementById("btn__css").style.backgroundColor = "white"
-  }
-  
-  if(types[type] == "CSS"){
-    document.getElementById("btn__html").style.color = "red"
-    document.getElementById("btn__html").style.backgroundColor = "white"
-    
-    document.getElementById("btn__js").style.color = "#eabf01"
-    document.getElementById("btn__js").style.backgroundColor = "white"
-    
-    document.getElementById("btn__css").style.color = "white"
-    document.getElementById("btn__css").style.backgroundColor = "blue"
+  btns.map((btn, idx) => {
+    if(idx == type){
+      btn.style.color = "white";
+      btn.style.backgroundColor = typeColor[idx];
+    }
+    else {
+      btn.style.color = typeColor[idx];
+      btn.style.backgroundColor = "white";  
+    }
   }
 }
 
