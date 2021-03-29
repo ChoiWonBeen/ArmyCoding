@@ -12,7 +12,9 @@ showCode();
 changeType(0);
 
 function showCode(){
+  console.log(HTMLEditor.innerText)
   let htmlCode = HTMLEditor.innerText.replaceAll("&nbsp;", "");
+  console.log(htmlCode)
   let jsCode = "<script>" + JSEditor.innerText.replaceAll("&nbsp;", "") + "</script>";
   let cssCode = "<style>" + CSSEditor.innerText.replaceAll("&nbsp;", "") + "</style>";
 
