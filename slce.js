@@ -40,10 +40,10 @@ function changeType(type){
   btns.map((btn, idx) => {
     if(idx == type){
       btn.style.color = "white";
-      btn.style.backgroundColor = typeColor[idx];
+      btn.style.backgroundColor = typeColors[idx];
     }
     else {
-      btn.style.color = typeColor[idx];
+      btn.style.color = typeColors[idx];
       btn.style.backgroundColor = "white";  
     }
   })
