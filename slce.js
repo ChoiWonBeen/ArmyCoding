@@ -2,9 +2,9 @@ let HTMLEditor = document.getElementById("html-editor");
 let JSEditor = document.getElementById("js-editor")
 let CSSEditor = document.getElementById("css-editor")
 
-HTMLEditor.value = localStorage.getItem("htmlCode");
-JSEditor.value = localStorage.getItem("jsCode");
-CSSEditor.value = localStorage.getItem("cssCode");
+HTMLEditor.innerText = localStorage.getItem("htmlCode");
+JSEditor.innerText = localStorage.getItem("jsCode");
+CSSEditor.innerText = localStorage.getItem("cssCode");
 let types = ["HTML", "JS", "CSS"];
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 
@@ -12,9 +12,9 @@ showCode();
 changeType(0);
 
 function showCode(){
-  let htmlCode = HTMLEditor.value;
-  let jsCode = "<script>" + JSEditor.value + "</script>";
-  let cssCode = "<style>" + CSSEditor.value + "</style>";
+  let htmlCode = HTMLEditor.innerText;
+  let jsCode = "<script>" + JSEditor.innerText + "</script>";
+  let cssCode = "<style>" + CSSEditor.innerText + "</style>";
 
   let frame = document.getElementById("preview-display").contentWindow.document;
   frame.open();
@@ -62,9 +62,9 @@ function changeType(type){
 }
 
 function saveCode() {
-  localStorage.setItem("htmlCode", HTMLEditor.value);
-  localStorage.setItem("jsCode", JSEditor.value);
-  localStorage.setItem("cssCode", CSSEditor.value);
+  localStorage.setItem("htmlCode", HTMLEditor.innerText);
+  localStorage.setItem("jsCode", JSEditor.innerText);
+  localStorage.setItem("cssCode", CSSEditor.innerText);
 }
 
 window.onbeforeunload = function() {
