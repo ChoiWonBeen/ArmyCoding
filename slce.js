@@ -12,11 +12,9 @@ showCode();
 changeType(0);
 
 function showCode(){
-  console.log(HTMLEditor.innerText)
-  let htmlCode = HTMLEditor.innerText.replaceAll("&nbsp;", "");
-  console.log(htmlCode)
-  let jsCode = "<script>" + JSEditor.innerText.replaceAll("&nbsp;", "") + "</script>";
-  let cssCode = "<style>" + CSSEditor.innerText.replaceAll("&nbsp;", "") + "</style>";
+  let htmlCode = HTMLEditor;
+  let jsCode = "<script>" + JSEditor + "</script>";
+  let cssCode = "<style>" + CSSEditor + "</style>";
 
   let frame = document.getElementById("preview-display").contentWindow.document;
   frame.open();
