@@ -46,7 +46,7 @@ function changeType(type){
       btn.style.color = typeColor[idx];
       btn.style.backgroundColor = "white";  
     }
-  }
+  })
 }
 
 function saveCode() {
