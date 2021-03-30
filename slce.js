@@ -52,7 +52,7 @@ function changeType(type){
 function saveCode() {
   localStorage.setItem("htmlCode", HTMLEditor.innerText);
   localStorage.setItem("jsCode", JSEditor.innerText);
-  localStorage.setItem("cssCode", CSSEditor.innerText);
+  localStorage.setItem("cssCode", CSSEditor.value);
 }
 
 window.onbeforeunload = function() {
