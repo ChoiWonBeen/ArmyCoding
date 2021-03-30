@@ -18,8 +18,8 @@ changeType(0);
 
 function showCode(){
   let htmlCode = HTMLEditor.innerText;
-  let jsCode = "<script>" + JSEditor.innerText + "</script>";
-  let cssCode = "<style>" + CSSEditor.innerText + "</style>";
+  let jsCode = "<script>" + JSEditor.innerText.replaceAll(" ","") + "</script>";
+  let cssCode = "<style>" + CSSEditor.innerText.replaceAll(" ","") + "</style>";
 
   let frame = document.getElementById("preview-display").contentWindow.document;
   frame.open();
