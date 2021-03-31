@@ -50,9 +50,9 @@ function changeType(type){
 }
 
 function saveCode() {
-  localStorage.setItem("htmlCode", HTMLEditor.innerHTML);
-  localStorage.setItem("jsCode", JSEditor.innerHTML);
-  localStorage.setItem("cssCode", CSSEditor.innerHTML);
+  localStorage.setItem("htmlCode", HTMLEditor.innerText);
+  localStorage.setItem("jsCode", JSEditor.innerText);
+  localStorage.setItem("cssCode", CSSEditor.innerText);
 }
 
 window.onbeforeunload = function() {
