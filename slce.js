@@ -5,9 +5,9 @@ let HTMLBtn = document.getElementById("btn__html");
 let JSBtn = document.getElementById("btn__js");
 let CSSBtn = document.getElementById("btn__css");
 
-HTMLEditor.innerHTML = localStorage.getItem("htmlCode");
-JSEditor.innerHTML = localStorage.getItem("jsCode");
-CSSEditor.innerHTML = localStorage.getItem("cssCode");
+HTMLEditor.innerText = localStorage.getItem("htmlCode");
+JSEditor.innerText = localStorage.getItem("jsCode");
+CSSEditor.innerText = localStorage.getItem("cssCode");
 
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 let btns = [HTMLBtn, JSBtn, CSSBtn];
