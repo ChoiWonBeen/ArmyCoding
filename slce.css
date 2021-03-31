@@ -59,6 +59,7 @@ body {
   font-family: "Consolas";
   font-size: 14px;
   line-height: 17px;
+  white-space: pre-wrap;
   resize: none;
   outline: none;
   border: 2px outset;
