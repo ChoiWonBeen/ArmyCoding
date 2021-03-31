@@ -16,6 +16,18 @@ let typeColors = ["red", "#eabf01", "blue"];
 showCode();
 changeType(0);
 
+editors.map((editor) => {
+  editor.addEventListener("keydown", (e) => {
+    if(e.key =="Tab") {
+      e.preventDefault();
+      let start = this.selectionStart;
+      let end = this.selectionEnd;
+      this.value = this.value.substring(0, start) + "\t" + this.value.substring(end);
+      this.selectionStart = this.selectionEnd = start + 1;
+    }
+  });
+})
+
 function showCode(){
   let htmlCode = HTMLEditor.innerText;
   let jsCode = "<script>" + JSEditor.innerText + "</script>";
