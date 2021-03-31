@@ -5,9 +5,9 @@ let HTMLBtn = document.getElementById("btn__html");
 let JSBtn = document.getElementById("btn__js");
 let CSSBtn = document.getElementById("btn__css");
 
-HTMLEditor.innerText = localStorage.getItem("htmlCode");
-JSEditor.innerText = localStorage.getItem("jsCode");
-CSSEditor.innerText = localStorage.getItem("cssCode");
+HTMLEditor.innerHTML = localStorage.getItem("htmlCode");
+JSEditor.innerHTML = localStorage.getItem("jsCode");
+CSSEditor.innerHTML = localStorage.getItem("cssCode");
 
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 let btns = [HTMLBtn, JSBtn, CSSBtn];
@@ -50,9 +50,9 @@ function changeType(type){
 }
 
 function saveCode() {
-  localStorage.setItem("htmlCode", HTMLEditor.innerText);
-  localStorage.setItem("jsCode", JSEditor.innerText);
-  localStorage.setItem("cssCode", CSSEditor.innerText);
+  localStorage.setItem("htmlCode", HTMLEditor.innerHTML);
+  localStorage.setItem("jsCode", JSEditor.innerHTML);
+  localStorage.setItem("cssCode", CSSEditor.innerHTML);
 }
 
 window.onbeforeunload = function() {
