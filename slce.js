@@ -22,7 +22,7 @@ editors.map((editor) => {
       e.preventDefault();
       let start = this.selectionStart;
       let end = this.selectionEnd;
-      console.log(this.innerHTML);
+      this.innerHTML = this.innerHTML.substring(0, start) + "\t" + this.innerHTML.substring(end);
       this.selectionStart = this.selectionEnd = start + 1;
     }
   });
