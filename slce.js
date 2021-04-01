@@ -26,6 +26,12 @@ editors.map((editor) => {
       this.selectionStart = this.selectionEnd = start + 1;
     }
   });
+  
+  editor.addEventListener('paste', (event) => {
+    event.preventDefault();
+    document.execCommand('inserttext', false, event.clipboardData.getData('text/plain'));
+  });
+
 })
 
 function showCode(){
@@ -38,11 +44,6 @@ function showCode(){
   frame.write(htmlCode + jsCode + cssCode);
   frame.close();
 }
-
-document.querySelector('.editor').addEventListener('paste', (event) => {
-  event.preventDefault();
-  document.execCommand('inserttext', false, event.clipboardData.getData('text/plain'));
-});
 
 function changeType(type){
   editors[type].style.display = "block";
