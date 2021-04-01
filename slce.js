@@ -20,10 +20,6 @@ editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
     if(e.key =="Tab") {
       e.preventDefault();
-      let start = this.selectionStart;
-      let end = this.selectionEnd;
-      this.innerHTML = this.innerHTML.substring(0, start) + "\t" + this.innerHTML.substring(end);
-      this.selectionStart = this.selectionEnd = start + 1;
     }
   });
   
