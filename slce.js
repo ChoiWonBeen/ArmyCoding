@@ -17,7 +17,7 @@ showCode();
 changeType(0);
 
 editors.map((editor) => {
-  editor.addEventListener("keydown", (e) {
+  editor.addEventListener("keydown", function (e) {
     if(e.key =="Tab") {
       e.preventDefault();
       let start = this.selectionStart;
