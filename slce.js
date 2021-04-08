@@ -23,9 +23,13 @@ editors.map((editor) => {
       e.preventDefault();
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
-      window.getSelection().baseNode.data = window.getSelection().baseNode.data.slice(0, start) + "  " + window.getSelection().baseNode.data.slice(end, window.getSelection().baseNode.length);
+      let node = window.getSelection().baseNode;
       
-      console.log(start, end);
+      let front = node.data.slice(0, start);
+      let back = node.data.slice(end, node.length);
+      node.data = front + "  " + back;
+      
+      node.setSelectionRange(start + 2, start + 2);
     }
   });
   
