@@ -21,6 +21,8 @@ editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
     if(e.key =="Tab") {
       e.preventDefault();
+      console.log(editors[activeType].innerText);
+      console.log(editors[activeType].innerHTML);
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
       let front = editors[activeType].innerText.slice(0, start);
