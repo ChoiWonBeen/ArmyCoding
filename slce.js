@@ -12,6 +12,7 @@ CSSEditor.innerHTML = localStorage.getItem("cssCode");
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 let btns = [HTMLBtn, JSBtn, CSSBtn];
 let typeColors = ["red", "#eabf01", "blue"];
+let activeType = 0;
 
 showCode();
 changeType(0);
@@ -20,6 +21,10 @@ editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
     if(e.key =="Tab") {
       e.preventDefault();
+      let start = window.getSelection().anchorOffset;
+      let end = window.getSelection().extentOffset;
+      
+      editors[activeType].innerText  = editors[activeType].slice(0, start) + "\t" + editors[activeType].slice(end, editors[activeType].innerText.length());
     }
   });
   
@@ -42,6 +47,7 @@ function showCode(){
 }
 
 function changeType(type){
+  activeType = type;
   editors[type].style.display = "block";
   editors[(type + 1) % 3].style.display = "none";
   editors[(type + 2) % 3].style.display = "none";
