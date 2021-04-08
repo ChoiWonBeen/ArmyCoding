@@ -30,6 +30,7 @@ editors.map((editor) => {
       editors[activeType].innerText = front + "\t" + end;
       
       console.log(start, end, front, back);
+      console.log(editors[activeType].innerText);
     }
   });
   
