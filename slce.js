@@ -29,7 +29,14 @@ editors.map((editor) => {
       let back = node.data.slice(end, node.length);
       node.data = front + "  " + back;
       
-      console.log(window.getSelection().getRangeAt(0));
+      let range = window.getSelection().getRangeAt(0);
+      const newRange = document.createRange();
+      newRange.setStart(node, range.startOffset);
+      newRange.setEnd(node, range.endOffset);
+
+      const selection = document.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(newRange);
     }
   });
   
