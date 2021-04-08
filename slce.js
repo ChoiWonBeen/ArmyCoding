@@ -27,7 +27,7 @@ editors.map((editor) => {
       let end = window.getSelection().extentOffset;
       let front = editors[activeType].innerText.slice(0, start);
       let back = editors[activeType].innerText.slice(end, editors[activeType].innerText.length);
-      editors[activeType].innerText = front + "\t" + end;
+      editors[activeType].innerText = front + "\t" + back;
       
       console.log(start, end, front, back);
       console.log(editors[activeType].innerText);
