@@ -23,9 +23,7 @@ editors.map((editor) => {
       e.preventDefault();
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
-      let front = editors[activeType].innerText.slice(0, start);
-      let back = editors[activeType].innerText.slice(end, editors[activeType].innerText.length);
-      editors[activeType].innerText = front + "  " + back;
+      window.getSelection().baseNode.data = window.getSelection().baseNode.data.slice(0, start) + "  " + window.getSelection().baseNode.data.slice(end, window.getSelection().baseNode.length);
       
       console.log(start, end);
     }
