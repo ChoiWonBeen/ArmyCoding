@@ -23,8 +23,9 @@ editors.map((editor) => {
       e.preventDefault();
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
-      
-      editors[activeType].innerText  = editors[activeType].slice(0, start) + "\t" + editors[activeType].slice(end, editors[activeType].innerText.length());
+      let front = editors[activeType].innerText.slice(0, start);
+      let back = editors[activeType].innerText.slice(end, editors[activeType].innerText.length());
+      editors[activeType].innerText = front + "\t" + end;
     }
   });
   
