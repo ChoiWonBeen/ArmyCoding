@@ -21,16 +21,13 @@ editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
     if(e.key =="Tab") {
       e.preventDefault();
-      console.log(editors[activeType].innerText);
-      console.log(editors[activeType].innerHTML);
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
       let front = editors[activeType].innerText.slice(0, start);
       let back = editors[activeType].innerText.slice(end, editors[activeType].innerText.length);
-      editors[activeType].innerText = front + "\t" + back;
+      editors[activeType].innerText = front + "  " + back;
       
-      console.log(start, end, front, back);
-      console.log(editors[activeType].innerText);
+      console.log(start, end);
     }
   });
   
