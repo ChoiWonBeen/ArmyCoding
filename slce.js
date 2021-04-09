@@ -31,9 +31,10 @@ editors.map((editor) => {
       
       let range = window.getSelection().getRangeAt(0);
       const newRange = document.createRange();
+      console.log(newRange);
       newRange.setStart(node, range.startOffset);
       newRange.setEnd(node, range.endOffset);
-
+      console.log(newRange);
       const selection = document.getSelection();
       selection.removeAllRanges();
       selection.addRange(newRange);
