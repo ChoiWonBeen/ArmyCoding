@@ -19,18 +19,32 @@ changeType(0);
 
 editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
-    if(e.key =="Tab") {
+    if(e.key == "Tab") {
       e.preventDefault();
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
       let node = window.getSelection().baseNode;
       
-      let front = node.data.slice(0, start);
-      let back = node.data.slice(end, node.length);
-      node.data = front + "  " + back;
+      if(!node.data){
+        let text = document.createTextNode("  ");
+        node.appendChild(text);
+        node.removeChild(node.childNodes[0]);
+        
+        let range = window.getSelection().getRangeAt(0);
+        range.setStart(text, 2);
+      }
+      else { 
+        let front = node.data.slice(0, start);
+        let back = node.data.slice(end, node.length);
+        node.data = front + "  " + back;
       
-      let range = window.getSelection().getRangeAt(0);
-      range.setStart(range.startContainer, start + 2);
+        let range = window.getSelection().getRangeAt(0);
+        range.setStart(range.startContainer, start + 2);
+      }
+    }
+    
+    if(e.key == "{" || e.key == "(") {
+      
     }
   });
   
