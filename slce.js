@@ -30,8 +30,7 @@ editors.map((editor) => {
       node.data = front + "  " + back;
       
       let range = window.getSelection().getRangeAt(0);
-      range.setStart(range.startContainer, range.startOffset + 2);
-      console.log(range.startOffset);
+      range.setStart(range.startContainer, start + 2);
     }
   });
   
