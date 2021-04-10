@@ -17,6 +17,15 @@ let activeType = 0;
 showCode();
 changeType(0);
 
+let wrapperList = {
+  "{": "}",
+  "(": ")",
+  "[": "]",
+  '"': '"',
+  "'": "'",
+  "`": "`",
+}
+
 editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
     if(e.key == "Tab") {
@@ -43,6 +52,24 @@ editors.map((editor) => {
       }
     }
     
+    for(let wrapper in wrapperList){
+      if(e.key == wrapper){
+        let start = window.getSelection().anchorOffset;
+        let end = window.getSelection().extentOffset;
+        let node = window.getSelection().baseNode;
+
+        let nextChar = node.data.slice(start, start + 1);
+
+        if(nextChar != wrapperList[wrapper]) {
+          let front = node.data.slice(0, start);
+          let back = node.data.slice(end, node.length);
+          node.data = front + wrapperList[wrapper] + back;
+
+          let range = window.getSelection().getRangeAt(0);
+          range.setStart(range.startContainer, start);
+        }
+      }
+    }
     if(e.key == "{" || e.key == "(") {
       let start = window.getSelection().anchorOffset;
       let end = window.getSelection().extentOffset;
