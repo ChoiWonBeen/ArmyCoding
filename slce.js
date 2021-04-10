@@ -31,6 +31,7 @@ editors.map((editor) => {
       
       let range = window.getSelection().getRangeAt(0);
       range.setStart(range.startContainer, range.startOffset + 2);
+      console.log(range.startOffset);
     }
   });
   
