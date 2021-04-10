@@ -48,7 +48,7 @@ body {
 }
 
 #editor-field {
-  width: calc(35% - 10px);
+  width: calc(60% - 10px);
   margin-right: 10px;
 }
 
@@ -74,7 +74,7 @@ body {
 }
 
 #display-field {
-  width: 65%;
+  width: 40%;
 }
 
 #preview-display {
