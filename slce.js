@@ -70,23 +70,6 @@ editors.map((editor) => {
         }
       }
     }
-    if(e.key == "{" || e.key == "(") {
-      let start = window.getSelection().anchorOffset;
-      let end = window.getSelection().extentOffset;
-      let node = window.getSelection().baseNode;
-      let bracket = e.key;
-      
-      let nextChar = node.data.slice(start, start + 1);
-      
-      if((bracket == "{" && nextChar != "}") || (bracket == "(" && nextChar != ")")) {
-        let front = node.data.slice(0, start);
-        let back = node.data.slice(end, node.length);
-        node.data = front + (bracket === "{" ? "}" : ")") + back;
-      
-        let range = window.getSelection().getRangeAt(0);
-        range.setStart(range.startContainer, start);
-      }
-    }
   });
   
   editor.addEventListener('paste', (event) => {
