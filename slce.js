@@ -24,10 +24,15 @@ let wrapperList = {
   '"': '"',
   "'": "'",
   "`": "`",
+  "<": ">",
 }
 
 editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {
+    if(e.key == "Enter") {
+      
+    }
+    
     if(e.key == "Tab") {
       e.preventDefault();
       let start = window.getSelection().anchorOffset;
