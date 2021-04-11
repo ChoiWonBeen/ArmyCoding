@@ -64,10 +64,9 @@ editors.map((editor) => {
         let end = window.getSelection().extentOffset;
         let node = window.getSelection().baseNode;
         if(!node.data){
-          console.log(window.getSelection());
+          console.log(node);
           let text = document.createTextNode(`${wrapper + wrapperList[wrapper]}`);
           node.appendChild(text);
-          node.removeChild(node.childNodes[0]);
 
           let range = window.getSelection().getRangeAt(0);
           range.setStart(text, 1);
