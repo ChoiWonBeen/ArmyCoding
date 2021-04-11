@@ -28,11 +28,7 @@ let wrapperList = {
 };
 
 editors.map((editor) => {
-  editor.addEventListener("keydown", function (e) {
-    if(e.key == "Enter") {
-      
-    }
-    
+  editor.addEventListener("keydown", function (e) {   
     if(e.key == "Tab") {
       e.preventDefault();
       let start = window.getSelection().anchorOffset;
@@ -42,9 +38,7 @@ editors.map((editor) => {
       if(!node.data){
         let text = document.createTextNode("  ");
         node.appendChild(text);
-        if(node.childNodes.length != 1){
-          node.removeChild(node.childNodes[0]);
-        }
+        if(node.childNodes.length !== 1) node.removeChild(node.childNodes[0]);
         let range = window.getSelection().getRangeAt(0);
         range.setStart(text, 2);
       }
@@ -67,9 +61,7 @@ editors.map((editor) => {
           e.preventDefault();
           let text = document.createTextNode(`${wrapper + wrapperList[wrapper]}`);
           node.appendChild(text);
-          if(node.childNodes.length != 1){
-            node.removeChild(node.childNodes[0]);
-          }
+          if(node.childNodes.length !== 1) node.removeChild(node.childNodes[0]);
           let range = window.getSelection().getRangeAt(0);
           range.setStart(text, 1);
         }
