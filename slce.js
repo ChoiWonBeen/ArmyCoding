@@ -40,10 +40,9 @@ editors.map((editor) => {
       let node = window.getSelection().baseNode;
       
       if(!node.data){
-        console.log(window.getSelection());
         let text = document.createTextNode("  ");
         node.appendChild(text);
-        node.removeChild(node.childNodes[0]);
+//         node.removeChild(node.childNodes[0]);
         
         let range = window.getSelection().getRangeAt(0);
         range.setStart(text, 2);
@@ -64,7 +63,7 @@ editors.map((editor) => {
         let end = window.getSelection().extentOffset;
         let node = window.getSelection().baseNode;
         if(!node.data){
-          console.log(node);
+          e.preventDefault();
           let text = document.createTextNode(`${wrapper + wrapperList[wrapper]}`);
           node.appendChild(text);
 
