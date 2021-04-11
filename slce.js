@@ -62,16 +62,25 @@ editors.map((editor) => {
         let start = window.getSelection().anchorOffset;
         let end = window.getSelection().extentOffset;
         let node = window.getSelection().baseNode;
-
-        let nextChar = node.data.slice(start, start + 1);
-
-        if(nextChar != wrapperList[wrapper]) {
-          let front = node.data.slice(0, start);
-          let back = node.data.slice(end, node.length);
-          node.data = front + wrapperList[wrapper] + back;
+        if(!node.data){
+          let text = document.createTextNode(`${wrapper + wrapperList[wrapper]}`);
+          node.appendChild(text);
+          node.removeChild(node.childNodes[0]);
 
           let range = window.getSelection().getRangeAt(0);
-          range.setStart(range.startContainer, start);
+          range.setStart(text, 1);
+        }
+        else {
+          let nextChar = node.data.slice(start, start + 1);
+
+          if(nextChar != wrapperList[wrapper]) {
+            let front = node.data.slice(0, start);
+            let back = node.data.slice(end, node.length);
+            node.data = front + wrapperList[wrapper] + back;
+
+            let range = window.getSelection().getRangeAt(0);
+            range.setStart(range.startContainer, start);
+          }
         }
       }
     }
