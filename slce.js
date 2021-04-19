@@ -79,8 +79,23 @@ editors.map((editor) => {
       }
     }
     
-    if(e.key == "Backspace"){
-    
+    if(e.key == "Backspace" && window.getSelection().anchorOffset == window.getSelection().extentOffset){
+      let start = window.getSelection().anchorOffset;
+      let prevChar = node.data.slice(start, start - 1);
+      let nextChar = node.data.slice(start, start + 1);
+      
+      for(let wrapper in wrapperList){
+        if(prevChar == wrapper && nextChar == wrapperList[wrapper]){
+          e.preventDefault();
+          let node = window.getSelection().baseNode;
+          let front = node.data.slice(0, start - 1);
+          let back = node.data.slice(start + 1, node.length);
+          node.data = front + back;
+          
+          let range = window.getSelection().getRangeAt(0);
+          range.setStart(range.startContainer, start - 1);
+        }
+      }
     }
   });
   
