@@ -58,6 +58,7 @@ editors.map((editor) => {
         let end = Math.max(window.getSelection().anchorOffset, window.getSelection().extentOffset);
         let node = window.getSelection().baseNode;
         if(!node.data){
+          console.log(node);
           e.preventDefault();
           let text = document.createTextNode(`${wrapper + wrapperList[wrapper]}`);
           node.appendChild(text);
