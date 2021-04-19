@@ -29,18 +29,17 @@ let wrapperList = {
 
 editors.map((editor) => {
   editor.addEventListener("keydown", function (e) {   
-    let selection = window.getSelection();
     if(e.key == "Tab") {
       e.preventDefault();
-      let start = Math.min(selection.anchorOffset, selection.extentOffset);
-      let end = Math.max(selection.anchorOffset, selection.extentOffset);
-      let node = selection.baseNode;
+      let start = Math.min(window.getSelection().anchorOffset, window.getSelection().extentOffset);
+      let end = Math.max(window.getSelection().anchorOffset, window.getSelection().extentOffset);
+      let node = window.getSelection().baseNode;
       
       if(!node.data){
         let text = document.createTextNode("  ");
         node.appendChild(text);
         if(node.childNodes.length !== 1) node.removeChild(node.childNodes[0]);
-        let range = selection.getRangeAt(0);
+        let range = window.getSelection().getRangeAt(0);
         range.setStart(text, 2);
       }
       else { 
@@ -48,22 +47,22 @@ editors.map((editor) => {
         let back = node.data.slice(end, node.length);
         node.data = front + "  " + back;
       
-        let range = selection.getRangeAt(0);
+        let range = window.getSelection().getRangeAt(0);
         range.setStart(range.startContainer, start + 2);
       }
     }
     
     for(let wrapper in wrapperList){
       if(e.key == wrapper){
-        let start = Math.min(selection.anchorOffset, selection.extentOffset);
-        let end = Math.max(selection.anchorOffset, selection.extentOffset);
-        let node = selection.baseNode;
+        let start = Math.min(window.getSelection().anchorOffset, window.getSelection().extentOffset);
+        let end = Math.max(window.getSelection().anchorOffset, window.getSelection().extentOffset);
+        let node = window.getSelection().baseNode;
         if(!node.data){
           e.preventDefault();
           let text = document.createTextNode(`${wrapper + wrapperList[wrapper]}`);
           node.appendChild(text);
           if(node.childNodes.length !== 1) node.removeChild(node.childNodes[0]);
-          let range = selection.getRangeAt(0);
+          let range = window.getSelection().getRangeAt(0);
           range.setStart(text, 1);
         }
         else {
@@ -73,7 +72,7 @@ editors.map((editor) => {
             let front = node.data.slice(0, start);
             let back = node.data.slice(end, node.length);
             node.data = front + wrapperList[wrapper] + back;
-            let range = selection.getRangeAt(0);
+            let range = window.getSelection().getRangeAt(0);
             range.setStart(range.startContainer, start);
           }
         }
