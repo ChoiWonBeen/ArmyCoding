@@ -54,9 +54,9 @@ editors.map((editor) => {
     
     for(let wrapper in wrapperList){
       if(e.key == wrapper){
-        console.log(window.getSelection());
         let start = window.getSelection().anchorOffset;
         let end = window.getSelection().extentOffset;
+        console.log(start, end);
         let node = window.getSelection().baseNode;
         if(!node.data){
           e.preventDefault();
