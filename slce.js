@@ -84,9 +84,7 @@ editors.map((editor) => {
       let node = window.getSelection().baseNode;
       let prevChar = node.data.slice(start - 1, start);
       let nextChar = node.data.slice(start, start + 1);
-      
-      console.log(start, prevChar, nextChar)
-      
+
       for(let wrapper in wrapperList){
         if(prevChar == wrapper && nextChar == wrapperList[wrapper]){
           e.preventDefault();
