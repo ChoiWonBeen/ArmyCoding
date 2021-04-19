@@ -72,6 +72,7 @@ editors.map((editor) => {
             let front = node.data.slice(0, start);
             let back = node.data.slice(end, node.length);
             node.data = front + wrapperList[wrapper] + back;
+            console.log(window.getSelection(), front, wrapperList[wrapper], back);
 
             let range = window.getSelection().getRangeAt(0);
             range.setStart(range.startContainer, start);
@@ -80,6 +81,10 @@ editors.map((editor) => {
       }
     }
   });
+  
+  if(e.key == "Backspace"){
+    
+  }
   
   editor.addEventListener('paste', (event) => {
     event.preventDefault();
