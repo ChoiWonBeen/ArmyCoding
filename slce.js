@@ -82,7 +82,7 @@ editors.map((editor) => {
     if(e.key == "Backspace" && window.getSelection().anchorOffset == window.getSelection().extentOffset){
       let start = window.getSelection().anchorOffset;
       let node = window.getSelection().baseNode;
-      let prevChar = node.data.slice(start, start - 1);
+      let prevChar = node.data.slice(start - 1, start);
       let nextChar = node.data.slice(start, start + 1);
       
       console.log(start, prevChar, nextChar)
