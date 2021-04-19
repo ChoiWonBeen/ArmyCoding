@@ -88,8 +88,7 @@ editors.map((editor) => {
 
       for(let wrapper in wrapperList){
         if(prevChar == wrapper && nextChar == wrapperList[wrapper]){
-          e.preventDefault();
-          let front = node.data.slice(0, start - 1);
+          let front = node.data.slice(0, start);
           let back = node.data.slice(start + 1, node.length);
           node.data = front + back;
           
