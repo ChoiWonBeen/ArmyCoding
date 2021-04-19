@@ -80,11 +80,11 @@ editors.map((editor) => {
         }
       }
     }
-  });
-  
-  if(e.key == "Backspace"){
     
-  }
+    if(e.key == "Backspace"){
+    
+    }
+  });
   
   editor.addEventListener('paste', (event) => {
     event.preventDefault();
