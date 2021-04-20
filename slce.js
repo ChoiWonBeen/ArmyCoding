@@ -96,6 +96,10 @@ editors.map((editor) => {
         }
       }
     }
+    
+    if(e.key == "Enter"){
+      
+    }
   });
   
   editor.addEventListener('paste', (event) => {
