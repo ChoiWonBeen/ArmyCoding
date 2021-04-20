@@ -91,8 +91,8 @@ editors.map((editor) => {
           let front = node.data.slice(0, start);
           let back = node.data.slice(start + 1, node.length);
           node.data = front + back;          
-//           let range = window.getSelection().getRangeAt(0);
-//           range.setStart(range.startContainer, start - 1);
+          let range = window.getSelection().getRangeAt(0);
+          range.setStart(range.startContainer, start);
         }
       }
     }
