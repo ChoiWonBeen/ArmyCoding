@@ -10,5 +10,6 @@
 
 ***
 
-- [SLCE](https://choiwonbeen.github.io/ArmyCoding/slce.html) (Simple Live Code Editor)
+- <a href="https://choiwonbeen.github.io/ArmyCoding/slce.html" target="_blank">SLCE</a> (Simple Live Code Editor)
+
     - 싸지방컴은 끄면 초기화되어서 매번 WebStorm이나 VSCode를 깔 순 없으니 직접 만들고싶어짐.
