@@ -1,12 +1,44 @@
 <!DOCKTYPE html/>
 <html>
   <head>
-    <title>병영식당 자율부식 만족도 조사</title>
+    <title>병영식당 자율메뉴 만족도 조사</title>
     <link rel="stylesheet" href="./satisfaction.css">
   </head>
 
   <body>
-    자율부식 만족도 조사
+    <div class="topnav">
+      <img class="hamburgerBtn" src="./hamburgerBtn.png" alt="메뉴"/>
+      <div class="header">자율메뉴 만족도 조사</div>
+    </div>
+    
+    <div class="container">
+      <div class="disc">금일의 자율메뉴는 <span class="menu"></span>입니다.</div>
+  
+      <div class="selectBox">
+        <div class="select">
+          <img src="./worst.png"/>
+          <span class="selectText">별로다</span>
+        </div>
+        <div class="select">
+          <img src="./bad.png"/>
+          <span class="selectText">그저 그렇다</span>
+        </div>
+        <div class="select">
+          <img src="./avg.png"/>
+          <span class="selectText">보통이다</span>
+        </div>
+        <div class="select">
+          <img src="./good.png"/>
+          <span class="selectText">맛있었다</span>
+        </div>
+        <div class="select">
+          <img src="./best.png"/>
+          <span class="selectText">최고였다</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer"></div>
     <script type="text/javascript" src="./satisfaction.js"></script>
   </body>
 </html>
