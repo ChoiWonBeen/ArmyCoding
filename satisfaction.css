@@ -1,4 +1,49 @@
+* {
+  font-family: 'Noto Sans KR', serif;
+}
+
+.topnav {
+  display: flex;
+  height: 10%;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  border: 1px gray solid;
+}
+
+.header {
+  height:auto;
+}
+
+.container {
+  height: 75%;
+  border: 1px gray solid;
+}
+
+.desc {
+  height: 10%;
+  border: 1px gray solid;
+}
+
+.selectBox {
+  height: 30vh;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.select {
+  text-align: center;
+  width: 100px;
+}
+
 .select img {
   width: 100px;
   height: 100px;
+}
+
+.footer {
+  height: 15%;
+  border: 1px gray solid;
 }
