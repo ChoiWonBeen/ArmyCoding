@@ -5,6 +5,9 @@
 
 body {
   background-image: url("./background_table.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 5vh;
 }
 
