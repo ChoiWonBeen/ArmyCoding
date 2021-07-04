@@ -13,7 +13,7 @@ body {
 
 .app {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 0.85);
   box-shadow: 5px 5px 5px black;
 }
 
@@ -23,7 +23,7 @@ body {
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
 }
 
@@ -35,8 +35,24 @@ body {
   height: 75%;
 }
 
+.thanks {
+  font-size: 24px;
+  text-align: center;
+}
+
 .desc {
-  height: 10%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.time {
+  font-weight: bold;
+  color: rgb(230, 100, 10);
+}
+
+.menu {
+  font-weight: bold;
+  color: rgb(100, 100, 200);
 }
 
 .selectBox {
