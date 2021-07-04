@@ -13,7 +13,8 @@ body {
 
 .app {
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 5px 5px 5px black;
 }
 
 .topnav {
@@ -23,6 +24,7 @@ body {
   align-content: center;
   flex-wrap: wrap;
   font-size: 40px;
+  font-weight: bold;
 }
 
 .header {
