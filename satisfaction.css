@@ -1,5 +1,16 @@
 * {
   font-family: 'Noto Sans KR', serif;
+  color: black;
+}
+
+body {
+  background-image: url("./background_table.png");
+  padding: 5vh;
+}
+
+.app {
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .topnav {
@@ -8,21 +19,19 @@
   justify-content: center;
   align-content: center;
   flex-wrap: wrap;
-  border: 1px gray solid;
+  font-size: 40px;
 }
 
 .header {
   height:auto;
 }
 
-.container {
+.main {
   height: 75%;
-  border: 1px gray solid;
 }
 
 .desc {
   height: 10%;
-  border: 1px gray solid;
 }
 
 .selectBox {
@@ -45,5 +54,4 @@
 
 .footer {
   height: 15%;
-  border: 1px gray solid;
 }
