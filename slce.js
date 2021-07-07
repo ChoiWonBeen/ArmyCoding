@@ -4,13 +4,14 @@ let CSSEditor = document.getElementById("css-editor");
 let HTMLBtn = document.getElementById("btn__html");
 let JSBtn = document.getElementById("btn__js");
 let CSSBtn = document.getElementById("btn__css");
+let CHANGEBtn = document.getElementById("btn__change");
 
 HTMLEditor.innerHTML = localStorage.getItem("htmlCode");
 JSEditor.innerHTML = localStorage.getItem("jsCode");
 CSSEditor.innerHTML = localStorage.getItem("cssCode");
 
 let editors = [HTMLEditor, JSEditor, CSSEditor];
-let btns = [HTMLBtn, JSBtn, CSSBtn];
+let btns = [HTMLBtn, JSBtn, CSSBtn, CHANGEBtn];
 let typeColors = ["red", "#eabf01", "blue"];
 let activeType = 0;
 
