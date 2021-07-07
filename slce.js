@@ -13,7 +13,8 @@ CSSEditor.innerHTML = localStorage.getItem("cssCode");
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 let btns = [HTMLBtn, JSBtn, CSSBtn, CHANGEBtn];
 let typeColors = ["red", "#eabf01", "blue", "5cb85c"];
-let activeType = 0;
+
+let fullFlag = false;
 
 showCode();
 changeType(0);
@@ -122,11 +123,29 @@ function showCode(){
 }
 
 function changeType(type){
-  activeType = type;
-  editors[type].style.display = "block";
-  editors[(type + 1) % 3].style.display = "none";
-  editors[(type + 2) % 3].style.display = "none";
-  
+  if(type !== 3){
+    editors[type].style.display = "block";
+    editors[(type + 1) % 3].style.display = "none";
+    editors[(type + 2) % 3].style.display = "none";
+  }
+  else {
+    if(fullFlag){
+      document.getElementById("#container").display = "block";
+      document.getElementById("#container").height = "auto";
+      document.getElementById("#editor-field").width = "100%";
+      document.getElementById("#display-field").width = "100%";
+      document.getElementById("#display-field").height = "100vh";
+      fullFlag = false;
+    }
+    else {
+      document.getElementById("#container").display = "flex";
+      document.getElementById("#container").height = "calc(100vh - 40px)";
+      document.getElementById("#editor-field").width = "calc(60% - 10px)";
+      document.getElementById("#display-field").width = "40%";
+      document.getElementById("#display-field").height = "auto";
+      fullFlag = true;
+    }
+  }
   btns.map((btn, idx) => {
     if(idx == type){
       btn.style.color = "white";
