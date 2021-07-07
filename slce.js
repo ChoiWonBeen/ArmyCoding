@@ -12,7 +12,7 @@ CSSEditor.innerHTML = localStorage.getItem("cssCode");
 
 let editors = [HTMLEditor, JSEditor, CSSEditor];
 let btns = [HTMLBtn, JSBtn, CSSBtn, CHANGEBtn];
-let typeColors = ["red", "#eabf01", "blue"];
+let typeColors = ["red", "#eabf01", "blue", "5cb85c"];
 let activeType = 0;
 
 showCode();
