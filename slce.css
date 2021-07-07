@@ -41,6 +41,11 @@ body {
   border-color: blue;
 }
 
+#btn__change{
+  color: #5cb85c;
+  border-color: #5cb85c;
+}
+
 #container {
   width: 100%;
   height: auto;
