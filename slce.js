@@ -130,19 +130,19 @@ function changeType(type){
   }
   else {
     if(fullFlag){
-      document.getElementById("#container").display = "block";
-      document.getElementById("#container").height = "auto";
-      document.getElementById("#editor-field").width = "100%";
-      document.getElementById("#display-field").width = "100%";
-      document.getElementById("#display-field").height = "100vh";
+      document.getElementById("#container").style.display = "block";
+      document.getElementById("#container").style.height = "auto";
+      document.getElementById("#editor-field").style.width = "100%";
+      document.getElementById("#display-field").style.width = "100%";
+      document.getElementById("#display-field").style.height = "100vh";
       fullFlag = false;
     }
     else {
-      document.getElementById("#container").display = "flex";
-      document.getElementById("#container").height = "calc(100vh - 40px)";
-      document.getElementById("#editor-field").width = "calc(60% - 10px)";
-      document.getElementById("#display-field").width = "40%";
-      document.getElementById("#display-field").height = "auto";
+      document.getElementById("#container").style.display = "flex";
+      document.getElementById("#container").style.height = "calc(100vh - 40px)";
+      document.getElementById("#editor-field").style.width = "calc(60% - 10px)";
+      document.getElementById("#display-field").style.width = "40%";
+      document.getElementById("#display-field").style.height = "auto";
       fullFlag = true;
     }
   }
