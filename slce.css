@@ -1,108 +1,84 @@
 * {
-  font-family: 'Noto Sans KR', serif;
-  color: black;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
 body {
-  background-image: url("./background_table.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 5vh;
+  padding: 0 16px;
 }
 
-.app {
-  width: 55%;
-  height: 90vh;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.85);
-  box-shadow: 5px 5px 5px black;
-  padding: 0 24px;
+#topnav {
+  margin-top: 5px;
 }
 
-.topnav {
-  height: 20%;
-  justify-content: center;
-  align-content: center;
-  flex-wrap: wrap;
-  font-size: 50px;
+#active-btn {
+  margin-bottom: 5px;
+}
+
+.btn {
+  height: 30px;
+  padding: 2px 6px;
+  font-size: 15px;
   font-weight: bold;
+  outline: none;
+  border-width: 2px;
+  background-color: #FFFFFF;
 }
 
-.header {
-  height:auto;
+#btn__html {
+  color: red;
+  border-color: red;
 }
 
-.main {
-  height: 70%;
+#btn__js {
+  color: #eabf01;
+  border-color: #eabf01;
 }
 
-.thanks {
-  font-size: 22px;
-  text-align: left;
+#btn__css {
+  color: blue;
+  border-color: blue;
 }
 
-.desc {
-  margin-top: 20px;
-  font-size: 30px;
-}
-
-.time {
-  font-weight: bold;
-  color: rgb(230, 100, 10);
-}
-
-.menu {
-  font-size: 25px;
-  font-weight: normal;
-}
-
-.menu__main {
-  color: rgb(100, 100, 200);
-}
-
-.menu__auto {
-  color: rgb(250, 100, 80);
-}
-
-.menu__side {
-  color: rgb(177, 100, 200);
-}
-
-.display {
-  display: flex;
-  justify-content: space-between;
-}
-
-.selectBox {
+#container {
   width: 100%;
-  height: 30vh;
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
-  flex-wrap: wrap;
-  padding: 0 20px;
+  height: auto;
 }
 
-.select {
-  text-align: center;
-  width: 100px;
+#editor-field {
+  width: 100%;
+  margin-right: 10px;
 }
 
-.select img {
-  width: 100px;
-  height: 100px;
+.editor {
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-family: "Consolas";
+  font-size: 14px;
+  line-height: 17px;
+  white-space: pre-wrap;
+  resize: none;
+  outline: none;
+  border: 2px outset;
 }
 
-.statisticsBox{
-  width: 40%;
-  padding: 0 5px;
-  height: 90vh;
-  border-radius: 20px;
-  background-color: rgba(120, 90, 70, 0.7);
-  box-shadow: 5px 5px 5px black;
+#js-editor {
+  display: none;
 }
 
-.footer {
-  height: 40px;
+#css-editor {
+  display: none;
+}
+
+#display-field {
+  width: 100%;
+  height: 100vh;
+}
+
+#preview-display {
+  width: 100%;
+  height: 100%;
+  border-style: outset;
 }
