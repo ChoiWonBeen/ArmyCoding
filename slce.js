@@ -141,22 +141,22 @@ function changeType(type){
   }
   else {
     if(fullFlag){
+      document.getElementById("container").style.display = "flex";
+      document.getElementById("container").style.height = "calc(100vh - 40px)";
+      document.getElementById("editor-field").style.width = "calc(60% - 10px)";
+      document.getElementById("display-field").style.width = "40%";
+      document.getElementById("display-field").style.height = "auto";
+      fullFlag = false;
+      CHANGEBtn.style.color = "#5cb85c";
+      CHANGEBtn.style.backgroundColor = "white";
+    }
+    else {
       document.getElementById("container").style.display = "block";
       document.getElementById("container").style.height = "auto";
       document.getElementById("container").style.minHeight = "calc(100vh - 40px)";
       document.getElementById("editor-field").style.width = "100%";
       document.getElementById("display-field").style.width = "100%";
       document.getElementById("display-field").style.height = "100vh";
-      fullFlag = false;
-      CHANGEBtn.style.color = "#5cb85c";
-      CHANGEBtn.style.backgroundColor = "white";
-    }
-    else {
-      document.getElementById("container").style.display = "flex";
-      document.getElementById("container").style.height = "calc(100vh - 40px)";
-      document.getElementById("editor-field").style.width = "calc(60% - 10px)";
-      document.getElementById("display-field").style.width = "40%";
-      document.getElementById("display-field").style.height = "auto";
       fullFlag = true;
       CHANGEBtn.style.color = "white";
       CHANGEBtn.style.backgroundColor = "#5cb85c";
