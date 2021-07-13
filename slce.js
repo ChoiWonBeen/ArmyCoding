@@ -157,6 +157,7 @@ function changeType(type){
       document.getElementById("editor-field").style.width = "calc(60% - 10px)";
       document.getElementById("display-field").style.width = "40%";
       document.getElementById("display-field").style.height = "auto";
+      document.getElementById("container").style.minHeight = "100%";
       fullFlag = true;
       CHANGEBtn.style.color = "white";
       CHANGEBtn.style.backgroundColor = "5cb85c";
