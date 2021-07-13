@@ -14,7 +14,7 @@ let editors = [HTMLEditor, JSEditor, CSSEditor];
 let btns = [HTMLBtn, JSBtn, CSSBtn];
 let typeColors = ["red", "#eabf01", "blue"];
 
-let fullFlag = false;
+let fullFlag = true;
 
 showCode();
 changeType(0);
