@@ -11,8 +11,8 @@ JSEditor.innerHTML = localStorage.getItem("jsCode");
 CSSEditor.innerHTML = localStorage.getItem("cssCode");
 
 let editors = [HTMLEditor, JSEditor, CSSEditor];
-let btns = [HTMLBtn, JSBtn, CSSBtn, CHANGEBtn];
-let typeColors = ["red", "#eabf01", "blue", "5cb85c"];
+let btns = [HTMLBtn, JSBtn, CSSBtn];
+let typeColors = ["red", "#eabf01", "blue"];
 
 let fullFlag = false;
 
@@ -127,15 +127,29 @@ function changeType(type){
     editors[type].style.display = "block";
     editors[(type + 1) % 3].style.display = "none";
     editors[(type + 2) % 3].style.display = "none";
+    
+    btns.map((btn, idx) => {
+      if(idx == type){
+        btn.style.color = "white";
+        btn.style.backgroundColor = typeColors[idx];
+      }
+      else {
+        btn.style.color = typeColors[idx];
+        btn.style.backgroundColor = "white";  
+      }
+    })
   }
   else {
     if(fullFlag){
       document.getElementById("container").style.display = "block";
       document.getElementById("container").style.height = "auto";
+      document.getElementById("container").style.minHeight = "calc(100vh - 40px)";
       document.getElementById("editor-field").style.width = "100%";
       document.getElementById("display-field").style.width = "100%";
       document.getElementById("display-field").style.height = "100vh";
       fullFlag = false;
+      CHANGEBtn.style.color = "5cb85c";
+      CHANGEBtn.style.backgroundColor = white;
     }
     else {
       document.getElementById("container").style.display = "flex";
@@ -144,18 +158,10 @@ function changeType(type){
       document.getElementById("display-field").style.width = "40%";
       document.getElementById("display-field").style.height = "auto";
       fullFlag = true;
+      CHANGEBtn.style.color = white;
+      CHANGEBtn.style.backgroundColor = "5cb85c";
     }
   }
-  btns.map((btn, idx) => {
-    if(idx == type){
-      btn.style.color = "white";
-      btn.style.backgroundColor = typeColors[idx];
-    }
-    else {
-      btn.style.color = typeColors[idx];
-      btn.style.backgroundColor = "white";  
-    }
-  })
 }
 
 function saveCode() {
