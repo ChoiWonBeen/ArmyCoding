@@ -149,7 +149,7 @@ function changeType(type){
       document.getElementById("display-field").style.height = "100vh";
       fullFlag = false;
       CHANGEBtn.style.color = "5cb85c";
-      CHANGEBtn.style.backgroundColor = white;
+      CHANGEBtn.style.backgroundColor = "white";
     }
     else {
       document.getElementById("container").style.display = "flex";
@@ -158,7 +158,7 @@ function changeType(type){
       document.getElementById("display-field").style.width = "40%";
       document.getElementById("display-field").style.height = "auto";
       fullFlag = true;
-      CHANGEBtn.style.color = white;
+      CHANGEBtn.style.color = "white";
       CHANGEBtn.style.backgroundColor = "5cb85c";
     }
   }
