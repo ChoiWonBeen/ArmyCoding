@@ -144,6 +144,7 @@ function changeType(type){
       document.getElementById("container").style.display = "flex";
       document.getElementById("container").style.height = "calc(100vh - 40px)";
       document.getElementById("editor-field").style.width = "calc(60% - 10px)";
+      document.getElementById("editor-field").style.minHeight = "none";
       document.getElementById("display-field").style.width = "40%";
       document.getElementById("display-field").style.height = "auto";
       fullFlag = false;
@@ -153,7 +154,7 @@ function changeType(type){
     else {
       document.getElementById("container").style.display = "block";
       document.getElementById("container").style.height = "auto";
-      document.getElementById("container").style.minHeight = "calc(100vh - 40px)";
+      document.getElementById("editor-field").style.minHeight = "calc(100vh - 40px)";
       document.getElementById("editor-field").style.width = "100%";
       document.getElementById("display-field").style.width = "100%";
       document.getElementById("display-field").style.height = "100vh";
