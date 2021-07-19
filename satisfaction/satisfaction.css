@@ -4,7 +4,7 @@
 }
 
 body {
-  background-image: url("./background_table.png");
+  background-image: url("./static/background_table.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
