@@ -10,8 +10,8 @@
 
 ***
 
-- <a href="https://choiwonbeen.github.io/ArmyCoding/slce.html" target="_blank">SLCE</a> (Simple Live Code Editor)
+- <a href="https://choiwonbeen.github.io/ArmyCoding/slce/slce.html" target="_blank">SLCE</a> (Simple Live Code Editor)
     - 싸지방컴은 끄면 초기화되어서 매번 WebStorm이나 VSCode를 깔 순 없으니 직접 만들고싶어짐. ~github codespace beta 확정될때까지만..~
 
-- <a href="https://choiwonbeen.github.io/ArmyCoding/satisfaction.html" target="_blank">병영식당 자율메뉴 만족도조사</a>
+- <a href="https://choiwonbeen.github.io/ArmyCoding/satisfaction/satisfaction.html" target="_blank">병영식당 자율메뉴 만족도조사</a>
     - 대대 자율메뉴에 대한 만족도조사를 설문지 방식으로 하는 것보다는 태블릿 등으로 학생식당 만족도조사와 같은 방식으로 조사하면 그때그때 만족도를 조사할 수 있어 병사들의 의견을 좀 더 명확히 수용할 수 있으며, 응답률도 높을 것으로 기대함. 
