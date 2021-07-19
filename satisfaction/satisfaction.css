@@ -110,7 +110,10 @@ body {
 }
 
 .btn {
+	float: right;
 	background-color: #5cb85c;
 	color: white;
 	border: none;
+	padding: 5px 4px;
+	margin-right: 10px;
 }
